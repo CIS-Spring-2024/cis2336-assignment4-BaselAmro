@@ -1,0 +1,134 @@
+/* Overall page styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111; /* Sets the background color for the entire page */
+    color: #ffffff; /* Sets the text color for the entire page */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333; /* Dark background for the navbar */
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; /* Aligns the nav items in a row */
+    margin-right: -4px; /* Removes the gap between inline-block elements */
+}
+
+nav ul li a {
+    display: block; /* Allows padding and background color */
+    padding: 15px 20px;
+    color: #ffffff; /* White text for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.current, nav ul li a:hover {
+    background-color: #e8491d; /* Highlight for the current page and on hover */
+    border-radius: 3px;
+}
+
+/* Container for centering items in the main content area */
+.container {
+    width: 80%;
+    max-width: 1200px; /* Maximum width of the container */
+    margin: auto; /* Centers the container */
+    overflow: hidden;
+}
+
+/* Welcome message styling */
+.welcome-message h2 {
+    color: #e8491d; /* Red color for headings to stand out */
+    padding: 20px 0; /* Padding above and below the title */
+}
+
+/* Video container styling */
+.video-container {
+    max-width: 800px; /* Maximum width of the video container */
+    margin: 20px auto; /* Centers the video container and adds spacing */
+    padding: 10px; /* Padding around the video */
+    border: 2px solid #e8491d; /* Border color to match the theme */
+    border-radius: 10px; /* Rounded corners for the border */
+    background-color: #333; /* Dark background for the video container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+video {
+    width: 100%; /* Ensures the video stretches to fill the container */
+    border-radius: 8px; /* Rounded corners for the video */
+}
+
+/* Menu item styling */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjusts to distribute items evenly */
+    padding: 20px;
+}
+
+.menu-item {
+    flex-basis: 30%; /* Adjusted to fit 3 items per row */
+    max-width: 30%; /* Ensures that flex-basis is not exceeded */
+    margin-bottom: 2rem; /* Adds space between the rows of items */
+    padding: 1rem;
+    border: 2px solid #e8491d;
+    border-radius: 10px;
+    background-color: #292929;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    text-align: center; /* Centers the text within each menu item */
+}
+
+/* Responsive adjustments for medium screens, 2 items per row */
+@media (max-width: 900px) {
+    .menu-item {
+        flex-basis: 45%;
+        max-width: 45%;
+    }
+}
+
+/* Responsive adjustments for smaller screens, 1 item per row */
+@media (max-width: 600px) {
+    .menu-item {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Styling for the menu item elements */
+.menu-item img {
+    width: 100%; /* Full width of its parent */
+    border-bottom: 2px solid #e8491d; /* Red border at the bottom of the image */
+    border-top-left-radius: 8px; /* Rounds the top corners of the image */
+    border-top-right-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item h3 {
+    font-family: 'Georgia', serif;
+    color: #e8491d;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+    margin-bottom: 0.5rem;
+}
+
+.menu-item .price {
+    font-weight: bold;
+    margin-bottom: 1rem; /* Adds space before the quantity input */
+}
+
+/* Form input and button styling */
+input[type="number"] {
+    width: 60%; /* Sets a specific width for quantity inputs */
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
